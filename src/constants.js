@@ -1,0 +1,1 @@
+export const GET_BOX_COLOR = "GET_BOX_COLOR";

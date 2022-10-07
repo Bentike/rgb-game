@@ -1,9 +1,14 @@
 import './Styles/Box.css';
 import React from 'react';
 
-function Box({color}) {
+function Box({color, handleClick}) {
+
   return (
-    <div className='color__box' style={{backgroundColor: color}}></div>
+    <div 
+      className='color__box' 
+      style={{backgroundColor: color}}
+      onClick={handleClick}
+    ></div>
   );
 }
 
