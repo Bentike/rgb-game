@@ -1,0 +1,12 @@
+button{
+  padding: 7px;
+  color: #fff;
+  font-weight: bolder;
+  border: none;
+  box-shadow: 1px 1px gray;
+  transition: all ease-in-out .1s;
+}
+
+button:hover{
+    opacity: .8;
+}

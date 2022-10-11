@@ -1,0 +1,14 @@
+.buttons{
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #fff;
+}
+
+.reset, .level{
+   width: 30%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+}
