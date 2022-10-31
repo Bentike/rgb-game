@@ -1,7 +1,7 @@
 import './App.css';
 import Box from  './Components/Box';
 import {connect} from 'react-redux';
-import {getBoxColor, setGameLevelEasy, setGameLevelHard} from './actions';
+import {getBoxColor, setGameLevelEasy, setGameLevelHard, resetGame} from './actions';
 import { store } from '.';
 import Header from './Components/Header';
 import Buttons from './Components/Buttons';
@@ -27,18 +27,23 @@ const mapDispatchToProps = (dispatch) => {
      setHard: () => {
         dispatch(setGameLevelHard("hard"));
        console.log(store.getState().level)
-
      },
+
+     reset: () => {
+       dispatch(resetGame());
+       console.log(store.getState());
+     }
    }
 }
 
-function App({getColor, setEasy, setHard}) {
+function App({getColor, setEasy, setHard, reset}) {
   return (
     <div className="App">
       <Header rgb="255, 230, 180"/>
       <Buttons
         setHard={setHard}
         setEasy={setEasy}
+        reset={reset}
       />
       <div className='box__wrap'>
           <Box color="red" handleClick={getColor}/>
