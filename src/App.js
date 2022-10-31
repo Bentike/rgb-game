@@ -6,23 +6,6 @@ import { store } from '.';
 import Header from './Components/Header';
 import Buttons from './Components/Buttons';
 
-// Function to generate Random colors
-// function generateRandomColors(){
-//   let r = Math.floor(Math.random() * 256);
-//   let g = Math.floor(Math.random() * 256);
-//   let b = Math.floor(Math.random() * 256);
-//   return `rgb(${r}, ${g}, ${b})`;
-// }
-
-// function To generate specific number of random colors
-// function generateNumberOfColors(num){
-//   let colors = [];
-//   for(let i = 0; i < num; i++){
-//       colors.push(generateRandomColors());
-//   }
-//   return colors;
-// }
-
 const mapStateToProps = (state) => {
    return {
       color: state.pickedColor
