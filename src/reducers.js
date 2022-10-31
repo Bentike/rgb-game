@@ -1,4 +1,8 @@
-import { GET_BOX_COLOR, SET_GAME_LEVEL_EASY, SET_GAME_LEVEL_HARD } from "./constants";
+import { GET_BOX_COLOR, 
+         SET_GAME_LEVEL_EASY, 
+         SET_GAME_LEVEL_HARD,
+         RESET_GAME 
+        } from "./constants";
 
 const initialState = {
     pickedColor: '',
@@ -18,7 +22,11 @@ export const boxColorReducer = (state = initialState, action) => {
             return Object.assign({}, state, {level: action.payload});   
 
         case SET_GAME_LEVEL_HARD:
-            return Object.assign({}, state, {level: action.payload})   
+            return Object.assign({}, state, {level: action.payload});
+        
+        case RESET_GAME:
+            return Object.assign({}, {});
+                
         default:
             return state;    
     }
