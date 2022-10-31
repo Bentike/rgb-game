@@ -14,6 +14,15 @@ import Buttons from './Components/Buttons';
 //   return `rgb(${r}, ${g}, ${b})`;
 // }
 
+// function To generate specific number of random colors
+// function generateNumberOfColors(num){
+//   let colors = [];
+//   for(let i = 0; i < num; i++){
+//       colors.push(generateRandomColors());
+//   }
+//   return colors;
+// }
+
 const mapStateToProps = (state) => {
    return {
       color: state.pickedColor
