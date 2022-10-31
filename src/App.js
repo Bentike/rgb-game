@@ -1,7 +1,7 @@
 import './App.css';
 import Box from  './Components/Box';
 import {connect} from 'react-redux';
-import {getBoxColor, setGameLevelEasy, setGameLevelHard, resetGame} from './actions';
+import {getBoxColor, setGameLevelEasy, setGameLevelHard, resetGame, setColors} from './actions';
 import { store } from '.';
 import Header from './Components/Header';
 import Buttons from './Components/Buttons';
@@ -16,40 +16,44 @@ const mapDispatchToProps = (dispatch) => {
    return {
      getColor: (col) => {
       dispatch(getBoxColor(col));
-      console.log(store.getState().pickedColor);
      },
 
      setEasy: () => {
        dispatch(setGameLevelEasy("easy"));
-       console.log(store.getState().level)
      },
 
      setHard: () => {
         dispatch(setGameLevelHard("hard"));
-       console.log(store.getState().level)
      },
 
      reset: () => {
        dispatch(resetGame());
-       console.log(store.getState());
+     },
+
+     setColor: () => {
+       let level = store.getState().level;
+       level === "easy" ? dispatch(setColors(4)) : dispatch(setColors(8))
+        console.log(store.getState().colors)
      }
    }
 }
 
-function App({getColor, setEasy, setHard, reset}) {
+const colors = store.getState().colors;
+
+function App({getColor, setEasy, setHard, reset, setColor}) {
+  setColor()
   return (
     <div className="App">
       <Header rgb="255, 230, 180"/>
       <Buttons
         setHard={setHard}
         setEasy={setEasy}
-        reset={reset}
+        reset={setColor}
       />
       <div className='box__wrap'>
-          <Box color="red" handleClick={getColor}/>
-          <Box color="purple" handleClick={getColor}/>
-          <Box color="green" handleClick={getColor}/>
-          <Box color="orange" handleClick={getColor}/>
+          {colors.map((color) => {
+             return <Box key={color} color={color} handleClick={getColor}/>
+          })}
       </div> 
     </div>
   );
