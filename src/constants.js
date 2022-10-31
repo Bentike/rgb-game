@@ -2,3 +2,4 @@ export const GET_BOX_COLOR = "GET_BOX_COLOR";
 export const SET_GAME_LEVEL_EASY = "SET_GAME_LEVEL_EASY";
 export const SET_GAME_LEVEL_HARD = "SET_GAME_LEVEL_HARD";
 export const RESET_GAME = "RESET_GAME";
+export const SET_COLORS = "SET_COLORS";
