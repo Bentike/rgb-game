@@ -6,6 +6,14 @@ import { store } from '.';
 import Header from './Components/Header';
 import Buttons from './Components/Buttons';
 
+// Function to generate Random colors
+// function generateRandomColors(){
+//   let r = Math.floor(Math.random() * 256);
+//   let g = Math.floor(Math.random() * 256);
+//   let b = Math.floor(Math.random() * 256);
+//   return `rgb(${r}, ${g}, ${b})`;
+// }
+
 const mapStateToProps = (state) => {
    return {
       color: state.pickedColor
