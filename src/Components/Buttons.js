@@ -2,11 +2,11 @@ import React from 'react';
 import Button from './Button';
 import './Styles/Buttons.css';
 
-function Buttons({setHard, setEasy}) {
+function Buttons({setHard, setEasy, reset}) {
   return (
     <div className='buttons'>
       <div className='reset'>
-        <Button text='New Colors' color='green'/>
+        <Button text='New Colors' color='green' handleClick={reset}/>
         <p className='message'></p>
       </div>
       <div className='level'>
