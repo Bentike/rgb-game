@@ -1,7 +1,11 @@
 import { useEffect } from 'react';
 import Box from  './Components/Box';
 import {connect} from 'react-redux';
-import {getBoxColor, setGameLevelEasy, setGameLevelHard, resetGame, setColors} from './actions';
+import {getBoxColor, 
+        setGameLevelEasy, 
+        setGameLevelHard, 
+        resetGame, 
+        setColors} from './actions';
 import { store } from '.';
 import Header from './Components/Header';
 import Buttons from './Components/Buttons';
@@ -36,7 +40,6 @@ const mapDispatchToProps = (dispatch) => {
      setColor: () => {
        let level = store.getState().level;
        level === "easy" ? dispatch(setColors(4)) : dispatch(setColors(8))
-        console.log(store.getState().colors)
      }
    }
 }
