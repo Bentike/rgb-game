@@ -1,10 +1,11 @@
-import './App.css';
+import { useEffect } from 'react';
 import Box from  './Components/Box';
 import {connect} from 'react-redux';
 import {getBoxColor, setGameLevelEasy, setGameLevelHard, resetGame, setColors} from './actions';
 import { store } from '.';
 import Header from './Components/Header';
 import Buttons from './Components/Buttons';
+import './App.css';
 
 const mapStateToProps = (state) => {
    return {
@@ -38,10 +39,14 @@ const mapDispatchToProps = (dispatch) => {
    }
 }
 
-const colors = store.getState().colors;
+let colors = store.getState().colors;
 
 function App({getColor, setEasy, setHard, reset, setColor}) {
-  setColor()
+
+  useEffect(() => {
+     setColor();
+  }, [setColor]);
+
   return (
     <div className="App">
       <Header rgb="255, 230, 180"/>

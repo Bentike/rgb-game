@@ -26,7 +26,7 @@ const generateNumberOfColors = (num) => {
 const initialState = {
     pickedColor: '',
     colors: [],
-    targetColor: '',
+    targetColor: 'red',
     level: 'easy',
     message: ''
 }
