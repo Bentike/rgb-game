@@ -29,10 +29,12 @@ const mapDispatchToProps = (dispatch) => {
 
      setEasy: () => {
        dispatch(setGameLevelEasy("easy"));
+       dispatch(setColors(4));
      },
 
      setHard: () => {
         dispatch(setGameLevelHard("hard"));
+        dispatch(setColors(8));
      },
 
      reset: () => {
@@ -53,8 +55,14 @@ const mapDispatchToProps = (dispatch) => {
 
 function App({getColor, setEasy, setHard, reset, setColor, colors, message, setTargetColor}) {
 
+  // const getTarColor = () => {
+  //   let col = colors[Math.floor(Math.random() * colors.length)];
+  //   console.log(col);
+  // }
+  
   useEffect(() => {
      setColor();
+    //  getTarColor();
   }, [setColor]);
 
   return (
