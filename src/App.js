@@ -5,7 +5,8 @@ import {getBoxColor,
         setGameLevelEasy, 
         setGameLevelHard, 
         resetGame, 
-        setColors} from './actions';
+        setColors,
+        setTargetColor} from './actions';
 import { store } from '.';
 import Header from './Components/Header';
 import Buttons from './Components/Buttons';
@@ -40,7 +41,8 @@ const mapDispatchToProps = (dispatch) => {
      setColor: () => {
        let level = store.getState().level;
        level === "easy" ? dispatch(setColors(4)) : dispatch(setColors(8))
-     }
+     },
+
    }
 }
 
