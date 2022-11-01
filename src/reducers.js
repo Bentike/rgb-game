@@ -3,7 +3,8 @@ import { GET_BOX_COLOR,
          SET_GAME_LEVEL_HARD,
          RESET_GAME,
          SET_COLORS, 
-         SET_MESSAGE
+         SET_MESSAGE,
+         SET_TARGET_COLOR
         } from "./constants";
 
 //Function to generate Random colors
@@ -50,7 +51,10 @@ export const boxColorReducer = (state = initialState, action) => {
             return Object.assign({}, state, {level: action.payload});
 
         case SET_MESSAGE:
-            return Object.assign({}, state, {message: action.payload});    
+            return Object.assign({}, state, {message: action.payload});  
+            
+        case SET_TARGET_COLOR:
+            return Object.assign({}, state, {targetColor: action.payload});    
         
         case RESET_GAME:
             return Object.assign({}, {});
