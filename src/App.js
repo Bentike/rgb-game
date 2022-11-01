@@ -43,10 +43,14 @@ const mapDispatchToProps = (dispatch) => {
        level === "easy" ? dispatch(setColors(4)) : dispatch(setColors(8))
      },
 
+     setTargetColor: (color) => {
+        dispatch(setTargetColor(color))
+     }
+
    }
 }
 
-function App({getColor, setEasy, setHard, reset, setColor, colors, message}) {
+function App({getColor, setEasy, setHard, reset, setColor, colors, message, setTargetColor}) {
 
   useEffect(() => {
      setColor();
