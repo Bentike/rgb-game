@@ -16,7 +16,8 @@ const mapStateToProps = (state) => {
    return {
       pickedColor: state.pickedColor,
       colors: state.colors,
-      message: state.message
+      message: state.message,
+      target: state.targetColor
    }
 }
 
