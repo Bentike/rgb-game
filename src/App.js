@@ -17,7 +17,7 @@ const mapStateToProps = (state) => {
       pickedColor: state.pickedColor,
       colors: state.colors,
       message: state.message,
-      target: state.targetColor
+      targetColor: state.targetColor
    }
 }
 
@@ -46,23 +46,17 @@ const mapDispatchToProps = (dispatch) => {
        level === "easy" ? dispatch(setColors(4)) : dispatch(setColors(8))
      },
 
-     setTargetColor: (color) => {
+     setTarget: (color) => {
         dispatch(setTargetColor(color))
      }
 
    }
 }
 
-function App({getColor, setEasy, setHard, reset, setColor, colors, message, setTargetColor}) {
-
-  // const getTarColor = () => {
-  //   let col = colors[Math.floor(Math.random() * colors.length)];
-  //   console.log(col);
-  // }
+function App({getColor, setEasy, setHard, reset, setColor, colors, message, setTarget}) {
   
   useEffect(() => {
-     setColor();
-    //  getTarColor();
+    setColor();
   }, [setColor]);
 
   return (
