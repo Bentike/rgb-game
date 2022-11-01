@@ -41,7 +41,7 @@ const mapDispatchToProps = (dispatch) => {
    }
 }
 
-function App({getColor, setEasy, setHard, reset, setColor, colors}) {
+function App({getColor, setEasy, setHard, reset, setColor, colors, message}) {
 
   useEffect(() => {
      setColor();
@@ -54,6 +54,7 @@ function App({getColor, setEasy, setHard, reset, setColor, colors}) {
         setHard={setHard}
         setEasy={setEasy}
         reset={setColor}
+        message={message}
       />
       <div className='box__wrap'>
           {colors.map((color) => {
