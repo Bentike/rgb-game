@@ -9,7 +9,8 @@ import './App.css';
 
 const mapStateToProps = (state) => {
    return {
-      color: state.pickedColor
+      pickedColor: state.pickedColor,
+      colors: state.colors
    }
 }
 
@@ -39,9 +40,7 @@ const mapDispatchToProps = (dispatch) => {
    }
 }
 
-let colors = store.getState().colors;
-
-function App({getColor, setEasy, setHard, reset, setColor}) {
+function App({getColor, setEasy, setHard, reset, setColor, colors}) {
 
   useEffect(() => {
      setColor();
