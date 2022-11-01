@@ -10,7 +10,8 @@ import './App.css';
 const mapStateToProps = (state) => {
    return {
       pickedColor: state.pickedColor,
-      colors: state.colors
+      colors: state.colors,
+      message: state.message
    }
 }
 
