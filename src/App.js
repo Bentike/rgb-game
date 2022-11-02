@@ -12,8 +12,6 @@ import Header from './Components/Header';
 import Buttons from './Components/Buttons';
 import './App.css';
 
-const colors = store.getState().colors;
-
 const mapStateToProps = (state) => {
    return {
       pickedColor: state.pickedColor,
@@ -32,13 +30,11 @@ const mapDispatchToProps = (dispatch) => {
      setEasy: () => {
        dispatch(setGameLevelEasy("easy"));
        dispatch(setColors(4));
-       console.log(colors);
      },
 
      setHard: () => {
         dispatch(setGameLevelHard("hard"));
         dispatch(setColors(8));
-        console.log(colors);
      },
 
      reset: () => {
