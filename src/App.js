@@ -58,7 +58,7 @@ function App({getColor, setEasy, setHard, reset, setColor, colors, message, setT
   useEffect(() => {
     setColor();
   }, [setColor]);
-
+ 
   return (
     <div className="App">
       <Header rgb="255, 230, 180"/>
