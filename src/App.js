@@ -56,7 +56,10 @@ const mapDispatchToProps = (dispatch) => {
 function App({getColor, setEasy, setHard, setColor, colors, message, setTarget, targetColor}) {
   
   useEffect(() => {
-    setColor();
+     setColor();
+     setTimeout(() => {
+       setTarget(colors[Math.floor(Math.random() * colors.length)]);
+     }, 2000);
   }, [setColor]);
  
   return (
