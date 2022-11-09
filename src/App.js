@@ -6,7 +6,8 @@ import {getBoxColor,
         setGameLevelHard, 
         resetGame, 
         setColors,
-        setTargetColor} from './actions';
+        setTargetColor,
+        setMessage} from './actions';
 import { store } from '.';
 import Header from './Components/Header';
 import Buttons from './Components/Buttons';
@@ -25,6 +26,7 @@ const mapDispatchToProps = (dispatch) => {
    return {
      getColor: (col) => {
       dispatch(getBoxColor(col));
+      dispatch(setMessage());
      },
 
      setEasy: () => {
@@ -63,7 +65,6 @@ function App({getColor, setEasy, setHard, setColor, colors, message, setTarget, 
      setTarget();
   }, [setColor]);
  
-  console.log("targetColor: ",targetColor);
   return (
     <div className="App">
       <Header rgb="255, 230, 180"/>
