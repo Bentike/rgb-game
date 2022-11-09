@@ -4,4 +4,5 @@ export const SET_GAME_LEVEL_HARD = "SET_GAME_LEVEL_HARD";
 export const RESET_GAME = "RESET_GAME";
 export const SET_COLORS = "SET_COLORS";
 export const SET_MESSAGE = "SET_MESSAGE";
+export const CLEAR_MESSAGE = "CLEAR_MESSAGE";
 export const SET_TARGET_COLOR = "SET_TARGET_COLOR";

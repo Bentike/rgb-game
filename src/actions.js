@@ -4,7 +4,8 @@ import { GET_BOX_COLOR,
          RESET_GAME,
          SET_COLORS,
          SET_MESSAGE,
-         SET_TARGET_COLOR
+         SET_TARGET_COLOR,
+         CLEAR_MESSAGE
          } from "./constants";
 
 export const getBoxColor = (color) => {
@@ -44,6 +45,12 @@ export const setColors = (number) => {
 export const setMessage = () => {
     return {
         type: SET_MESSAGE
+    }
+}
+
+export const clearMessage = () => {
+    return {
+        type: CLEAR_MESSAGE
     }
 }
 
