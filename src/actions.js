@@ -41,10 +41,9 @@ export const setColors = (number) => {
    }
 }
 
-export const setMessage = (msg) => {
+export const setMessage = () => {
     return {
-        type: SET_MESSAGE,
-        payload: msg
+        type: SET_MESSAGE
     }
 }
 
