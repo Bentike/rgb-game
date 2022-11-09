@@ -30,11 +30,13 @@ const mapDispatchToProps = (dispatch) => {
      setEasy: () => {
        dispatch(setGameLevelEasy("easy"));
        dispatch(setColors(4));
+       dispatch(setTargetColor());
      },
 
      setHard: () => {
         dispatch(setGameLevelHard("hard"));
         dispatch(setColors(8));
+        dispatch(setTargetColor());
      },
 
      reset: () => {
@@ -43,11 +45,12 @@ const mapDispatchToProps = (dispatch) => {
 
      setColor: () => {
        let level = store.getState().level;
-       level === "easy" ? dispatch(setColors(4)) : dispatch(setColors(8))
+       level === "easy" ? dispatch(setColors(4)) : dispatch(setColors(8));
+       dispatch(setTargetColor());
      },
 
-     setTarget: (color) => {
-        dispatch(setTargetColor(color))
+     setTarget: () => {
+        dispatch(setTargetColor())
      }
 
    }
@@ -57,8 +60,10 @@ function App({getColor, setEasy, setHard, setColor, colors, message, setTarget, 
   
   useEffect(() => {
      setColor();
+     setTarget();
   }, [setColor]);
  
+  console.log("targetColor: ",targetColor);
   return (
     <div className="App">
       <Header rgb="255, 230, 180"/>
