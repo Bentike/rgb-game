@@ -4,6 +4,7 @@ import { GET_BOX_COLOR,
          RESET_GAME,
          SET_COLORS, 
          SET_MESSAGE,
+         CLEAR_MESSAGE,
          SET_TARGET_COLOR
         } from "./constants";
 
@@ -64,6 +65,9 @@ export const boxColorReducer = (state = initialState, action) => {
 
         case SET_MESSAGE:
             return Object.assign({}, state, {message: sendMessageToUser(state.pickedColor, state.targetColor)});  
+        
+        case CLEAR_MESSAGE:
+            return Object.assign({}, state, {message: ""});    
             
         case SET_TARGET_COLOR:
             return Object.assign({}, state, {targetColor: setATargetColor(state.colors)});    
