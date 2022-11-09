@@ -48,9 +48,8 @@ export const setMessage = (msg) => {
     }
 }
 
-export const setTargetColor = (color) => {
+export const setTargetColor = () => {
     return {
-        type: SET_TARGET_COLOR,
-        payload: color
+        type: SET_TARGET_COLOR
     }
 }
