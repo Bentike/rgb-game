@@ -71,7 +71,7 @@ function App({getColor, setEasy, setHard, setColor, colors, message, setTarget, 
  
   return (
     <div className="App">
-      <Header rgb="255, 230, 180"/>
+      <Header rgb={targetColor}/>
       <Buttons
         setHard={setHard}
         setEasy={setEasy}
