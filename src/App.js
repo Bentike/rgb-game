@@ -7,7 +7,8 @@ import {getBoxColor,
         resetGame, 
         setColors,
         setTargetColor,
-        setMessage} from './actions';
+        setMessage,
+        clearMessage} from './actions';
 import { store } from '.';
 import Header from './Components/Header';
 import Buttons from './Components/Buttons';
@@ -33,12 +34,14 @@ const mapDispatchToProps = (dispatch) => {
        dispatch(setGameLevelEasy("easy"));
        dispatch(setColors(4));
        dispatch(setTargetColor());
+       dispatch(clearMessage());
      },
 
      setHard: () => {
         dispatch(setGameLevelHard("hard"));
         dispatch(setColors(8));
         dispatch(setTargetColor());
+        dispatch(clearMessage());
      },
 
      reset: () => {
@@ -49,6 +52,7 @@ const mapDispatchToProps = (dispatch) => {
        let level = store.getState().level;
        level === "easy" ? dispatch(setColors(4)) : dispatch(setColors(8));
        dispatch(setTargetColor());
+       dispatch(clearMessage());
      },
 
      setTarget: () => {
