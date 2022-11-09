@@ -42,6 +42,7 @@ export const boxColorReducer = (state = initialState, action) => {
         case GET_BOX_COLOR: 
            // line 15 gives access to the background of the clicked box.
            let pickedColor = action.payload.target.style.backgroundColor;
+           console.log(pickedColor);
            return Object.assign({}, state, {pickedColor}); 
 
         case SET_GAME_LEVEL_EASY:
