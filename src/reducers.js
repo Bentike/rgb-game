@@ -5,7 +5,8 @@ import { GET_BOX_COLOR,
          SET_COLORS, 
          SET_MESSAGE,
          CLEAR_MESSAGE,
-         SET_TARGET_COLOR
+         SET_TARGET_COLOR,
+         SET_BOX_BG
         } from "./constants";
 
 //Function to generate Random colors
