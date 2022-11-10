@@ -5,7 +5,8 @@ import { GET_BOX_COLOR,
          SET_COLORS,
          SET_MESSAGE,
          SET_TARGET_COLOR,
-         CLEAR_MESSAGE
+         CLEAR_MESSAGE,
+         SET_BOX_BG
          } from "./constants";
 
 export const getBoxColor = (color) => {
@@ -58,4 +59,11 @@ export const setTargetColor = () => {
     return {
         type: SET_TARGET_COLOR
     }
+}
+
+export const setBoxBg = (color) => {
+   return {
+       type: SET_BOX_BG,
+       payload: color 
+   }
 }
