@@ -8,6 +8,7 @@ import {getBoxColor,
         setColors,
         setTargetColor,
         setMessage,
+        setBoxBg,
         clearMessage} from './actions';
 import { store } from '.';
 import Header from './Components/Header';
@@ -28,6 +29,7 @@ const mapDispatchToProps = (dispatch) => {
      getColor: (col) => {
       dispatch(getBoxColor(col));
       dispatch(setMessage());
+      dispatch(setBoxBg("none"));
      },
 
      setEasy: () => {
