@@ -6,3 +6,4 @@ export const SET_COLORS = "SET_COLORS";
 export const SET_MESSAGE = "SET_MESSAGE";
 export const CLEAR_MESSAGE = "CLEAR_MESSAGE";
 export const SET_TARGET_COLOR = "SET_TARGET_COLOR";
+export const SET_BOX_BG = "SET_BOX_BG";
