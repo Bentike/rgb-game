@@ -69,7 +69,7 @@ function App({getColor, setEasy, setHard, setColor, colors, message, setTarget, 
   useEffect(() => {
      setColor();
      setTarget();
-  }, [setTarget, setColor]);
+  }, [setTarget, setColor, getColor]);
  
   return (
     <div className="App">
