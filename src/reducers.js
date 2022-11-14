@@ -43,7 +43,8 @@ const initialState = {
     colors: [],
     targetColor: '',
     level: 'easy',
-    message: ''
+    message: '',
+    hideBox: ''
 }
 
 export const boxColorReducer = (state = initialState, action) => {
