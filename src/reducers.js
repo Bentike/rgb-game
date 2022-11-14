@@ -6,7 +6,7 @@ import { GET_BOX_COLOR,
          SET_MESSAGE,
          CLEAR_MESSAGE,
          SET_TARGET_COLOR,
-         SET_BOX_BG
+         HIDE_BOX
         } from "./constants";
 
 //Function to generate Random colors
@@ -73,7 +73,7 @@ export const boxColorReducer = (state = initialState, action) => {
         case SET_TARGET_COLOR:
             return Object.assign({}, state, {targetColor: setATargetColor(state.colors)}); 
         
-        case SET_BOX_BG:
+        case HIDE_BOX:
             return Object.assign({}, state);
             
 
