@@ -75,7 +75,7 @@ export const boxColorReducer = (state = initialState, action) => {
             return Object.assign({}, state, {targetColor: setATargetColor(state.colors)}); 
         
         case SET_BOX_BG:
-             console.log(action.payload.target);
+            console.log(action.payload.target);
             return Object.assign({}, state, {box_bg: action.payload});    
         
         case RESET_GAME:

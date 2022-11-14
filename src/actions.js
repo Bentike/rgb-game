@@ -61,8 +61,9 @@ export const setTargetColor = () => {
     }
 }
 
-export const setBoxBg = () => {
+export const setBoxBg = (bg) => {
    return {
-       type: SET_BOX_BG
+       type: SET_BOX_BG,
+       payload: bg
    }
 }
