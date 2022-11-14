@@ -44,7 +44,7 @@ const initialState = {
     targetColor: '',
     level: 'easy',
     message: '',
-    hideBox: ''
+    hideBox: false
 }
 
 export const boxColorReducer = (state = initialState, action) => {
@@ -74,7 +74,7 @@ export const boxColorReducer = (state = initialState, action) => {
             return Object.assign({}, state, {targetColor: setATargetColor(state.colors)}); 
         
         case HIDE_BOX:
-            return Object.assign({}, state);
+            return Object.assign({}, state, {hideBox: true});
             
 
         case RESET_GAME:

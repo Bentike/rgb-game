@@ -20,7 +20,8 @@ const mapStateToProps = (state) => {
       pickedColor: state.pickedColor,
       colors: state.colors,
       message: state.message,
-      targetColor: state.targetColor
+      targetColor: state.targetColor,
+      boxVisibility: state.hideBox
    }
 }
 
@@ -64,12 +65,11 @@ const mapDispatchToProps = (dispatch) => {
    }
 }
 
-function App({getColor, setEasy, setHard, setColor, colors, message, setTarget, targetColor}) {
-  
+function App({getColor, setEasy, setHard, setColor, colors, message, setTarget, targetColor, boxVisibility}) {
   useEffect(() => {
      setColor();
      setTarget();
-  }, [setTarget, setColor, getColor]);
+  }, [setTarget, setColor]);
  
   return (
     <div className="App">
@@ -82,7 +82,7 @@ function App({getColor, setEasy, setHard, setColor, colors, message, setTarget, 
       />
       <div className='box__wrap'>
           {colors.map((color) => {
-             return <Box key={color} color={color} handleClick={getColor}/>
+             return <Box key={color} visibility={boxVisibility} color={color} handleClick={getColor}/>
           })}
       </div> 
     </div>
