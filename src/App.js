@@ -29,7 +29,7 @@ const mapDispatchToProps = (dispatch) => {
      getColor: (col) => {
       dispatch(getBoxColor(col));
       dispatch(setMessage());
-      dispatch(setBoxBg(col));
+      dispatch(setBoxBg());
      },
 
      setEasy: () => {
