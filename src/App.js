@@ -8,6 +8,7 @@ import {getBoxColor,
         setColors,
         setTargetColor,
         setMessage,
+        setHeaderBg,
         hideBox,
         clearMessage} from './actions';
 import { store } from '.';
@@ -39,6 +40,7 @@ const mapDispatchToProps = (dispatch) => {
        dispatch(setColors(4));
        dispatch(setTargetColor());
        dispatch(clearMessage());
+       dispatch(setHeaderBg("steelblue"));
      },
 
      setHard: () => {
@@ -46,6 +48,7 @@ const mapDispatchToProps = (dispatch) => {
         dispatch(setColors(8));
         dispatch(setTargetColor());
         dispatch(clearMessage());
+        dispatch(setHeaderBg("steelblue"));
      },
 
      reset: () => {
@@ -57,10 +60,11 @@ const mapDispatchToProps = (dispatch) => {
        level === "easy" ? dispatch(setColors(4)) : dispatch(setColors(8));
        dispatch(setTargetColor());
        dispatch(clearMessage());
+       dispatch(setHeaderBg("steelblue"));
      },
 
      setTarget: () => {
-        dispatch(setTargetColor())
+        dispatch(setTargetColor());
      }
 
    }
