@@ -8,35 +8,7 @@ import { GET_BOX_COLOR,
          HIDE_BOX,
          SET_HEADER_BG
         } from "./constants";
-
-//Function to generate Random colors
-const generateRandomColors = () => {
-  let r = Math.floor(Math.random() * 256);
-  let g = Math.floor(Math.random() * 256);
-  let b = Math.floor(Math.random() * 256);
-  return `rgb(${r}, ${g}, ${b})`;
-}
-
-// function To generate specific number of random colors
-const generateNumberOfColors = (num) => {
-  let colors = [];
-  for(let i = 0; i < num; i++){
-      colors.push(generateRandomColors());
-  }
-  return colors;
-}
-
-// function to set A TargetColor
-const setATargetColor = (colors) => {
-    return colors[Math.floor(Math.random() * colors.length)];
-}
-
-// function to set message
-const sendMessageToUser = ((a, b) => {
-    if(a === b) return "Correct";
-    return "Incorrect";
-});
-
+import { generateNumberOfColors, setATargetColor, sendMessageToUser } from "./Components/Functions/HelperFuncs";
 
 const initialState = {
     pickedColor: '',
