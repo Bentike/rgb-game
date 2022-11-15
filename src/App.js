@@ -66,7 +66,17 @@ const mapDispatchToProps = (dispatch) => {
    }
 }
 
-function App({getColor, setEasy, setHard, setColor, colors, message, setTarget, targetColor, boxVisibility, newColors}) {
+function App({getColor, 
+              setEasy, 
+              setHard, 
+              setColor, 
+              colors, 
+              message, 
+              setTarget, 
+              targetColor, 
+              boxVisibility, 
+              newColors}){
+                
   useEffect(() => {
      setColor();
      setTarget();
