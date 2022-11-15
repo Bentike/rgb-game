@@ -41,6 +41,7 @@ const sendMessageToUser = ((a, b) => {
 const initialState = {
     pickedColor: '',
     colors: [],
+    newColors: [],
     targetColor: '',
     level: 'easy',
     message: '',
