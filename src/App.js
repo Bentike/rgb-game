@@ -22,6 +22,7 @@ const mapStateToProps = (state) => {
       newColors: state.newColors,
       message: state.message,
       targetColor: state.targetColor,
+      headerBackground: state.headerBg
    }
 }
 
@@ -69,7 +70,7 @@ function App({getColor,
               setEasy, 
               setHard, 
               setColor, 
-              colors, 
+              headerBackground,
               message, 
               setTarget, 
               targetColor, 
@@ -79,10 +80,10 @@ function App({getColor,
      setColor();
      setTarget();
   }, [setTarget, setColor]);
- 
+  
   return (
     <div className="App">
-      <Header rgb={targetColor}/>
+      <Header rgb={targetColor} bg={headerBackground}/>
       <Buttons
         setHard={setHard}
         setEasy={setEasy}

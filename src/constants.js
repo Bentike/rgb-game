@@ -7,3 +7,4 @@ export const SET_MESSAGE = "SET_MESSAGE";
 export const CLEAR_MESSAGE = "CLEAR_MESSAGE";
 export const SET_TARGET_COLOR = "SET_TARGET_COLOR";
 export const HIDE_BOX = "HIDE_BOX";
+export const SET_HEADER_BG = "SET_HEADER_BG";
