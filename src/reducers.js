@@ -52,7 +52,10 @@ export const boxColorReducer = (state = initialState, action) => {
     switch(action.type){
 
         case SET_COLORS:
-            return Object.assign({}, state, {colors: generateNumberOfColors(action.payload)});
+            return Object.assign({}, state, {
+                colors: generateNumberOfColors(action.payload),
+                newColors: [...state.colors]
+            });
 
         case GET_BOX_COLOR: 
            // line 15 gives access to the background of the clicked box.

@@ -82,7 +82,7 @@ function App({getColor, setEasy, setHard, setColor, colors, message, setTarget, 
         message={message}
       />
       <div className='box__wrap'>
-          {colors.map((color) => {
+          {newColors.map((color) => {
              return <Box key={color} visibility={boxVisibility} color={color} handleClick={getColor}/>
           })}
       </div> 
