@@ -45,7 +45,7 @@ const initialState = {
     targetColor: '',
     level: 'easy',
     message: '',
-    hideBox: false
+    headerBg: 'stealblue'
 }
 
 export const boxColorReducer = (state = initialState, action) => {
@@ -86,6 +86,7 @@ export const boxColorReducer = (state = initialState, action) => {
                 for(let i = 0; i < newColor.length; i++){
                     newColor[i] = clickedBoxBg;
                 }
+                state.headerBg = clickedBoxBg;
             }
             return Object.assign({}, state, {newColors: newColor});
             
