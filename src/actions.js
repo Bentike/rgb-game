@@ -6,7 +6,8 @@ import { GET_BOX_COLOR,
          SET_MESSAGE,
          SET_TARGET_COLOR,
          CLEAR_MESSAGE,
-         HIDE_BOX
+         HIDE_BOX,
+         SET_HEADER_BG
          } from "./constants";
 
 export const getBoxColor = (color) => {
@@ -66,4 +67,11 @@ export const hideBox = (color) => {
        type: HIDE_BOX,
        payload: color
    }
+}
+
+export const setHeaderBg = (color) => {
+    return {
+        type: SET_HEADER_BG,
+        payload: color
+    }
 }
