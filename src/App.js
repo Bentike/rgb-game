@@ -3,8 +3,7 @@ import Box from  './Components/Box';
 import {connect} from 'react-redux';
 import {getBoxColor, 
         setGameLevelEasy, 
-        setGameLevelHard, 
-        resetGame, 
+        setGameLevelHard,  
         setColors,
         setTargetColor,
         setMessage,
@@ -49,10 +48,6 @@ const mapDispatchToProps = (dispatch) => {
         dispatch(setTargetColor());
         dispatch(clearMessage());
         dispatch(setHeaderBg("steelblue"));
-     },
-
-     reset: () => {
-       dispatch(resetGame());
      },
 
      setColor: () => {
