@@ -8,6 +8,7 @@ import { GET_BOX_COLOR,
          HIDE_BOX,
          SET_HEADER_BG
         } from "./constants";
+        
 import { generateNumberOfColors, setATargetColor, sendMessageToUser } from "./Components/Functions/HelperFuncs";
 
 const initialState = {
