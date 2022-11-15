@@ -19,6 +19,7 @@ const mapStateToProps = (state) => {
    return {
       pickedColor: state.pickedColor,
       colors: state.colors,
+      newColors: state.newColors,
       message: state.message,
       targetColor: state.targetColor,
       boxVisibility: state.hideBox
@@ -65,7 +66,7 @@ const mapDispatchToProps = (dispatch) => {
    }
 }
 
-function App({getColor, setEasy, setHard, setColor, colors, message, setTarget, targetColor, boxVisibility}) {
+function App({getColor, setEasy, setHard, setColor, colors, message, setTarget, targetColor, boxVisibility, newColors}) {
   useEffect(() => {
      setColor();
      setTarget();
