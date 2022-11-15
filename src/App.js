@@ -90,8 +90,8 @@ function App({getColor,
         message={message}
       />
       <div className='box__wrap'>
-          {newColors.map((color) => {
-             return <Box key={color} color={color} handleClick={getColor}/>
+          {newColors.map((color, index) => {
+             return <Box key={index} color={color} handleClick={getColor}/>
           })}
       </div> 
     </div>

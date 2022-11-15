@@ -75,12 +75,13 @@ export const boxColorReducer = (state = initialState, action) => {
             return Object.assign({}, state, {message: ""});    
             
         case SET_TARGET_COLOR:
-            return Object.assign({}, state, {targetColor: setATargetColor(state.colors)}); 
+            return Object.assign({}, state, {targetColor: setATargetColor(state.newColors)}); 
         
         case HIDE_BOX:
-            let index = action;
-            console.log(index);
-            return Object.assign({}, state, {hideBox: false});
+            let boxToHide = action.payload.target.style.backgroundColor;
+            let index = state.newColors.indexOf(boxToHide);
+            if(state.message === "Incorrect") state.newColors[index] = "rgb(35, 35, 35)";
+            return Object.assign({}, state, {newColors: state.newColors});
             
 
         case RESET_GAME:
