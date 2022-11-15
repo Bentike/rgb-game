@@ -78,15 +78,16 @@ export const boxColorReducer = (state = initialState, action) => {
             return Object.assign({}, state, {targetColor: setATargetColor(state.newColors)}); 
         
         case HIDE_BOX:
+            let newColor = state.newColors;
             let clickedBoxBg = action.payload.target.style.backgroundColor;
-            let index = state.newColors.indexOf(clickedBoxBg);
-            if(state.message === "Incorrect") state.newColors[index] = "rgb(35, 35, 35)";
+            let index = newColor.indexOf(clickedBoxBg);
+            if(state.message === "Incorrect") newColor[index] = "rgb(35, 35, 35)";
             else{
-                for(let i = 0; i < state.newColors.length; i++){
-                    state.newColors[i] = clickedBoxBg;
+                for(let i = 0; i < newColor.length; i++){
+                    newColor[i] = clickedBoxBg;
                 }
             }
-            return Object.assign({}, state, {newColors: state.newColors});
+            return Object.assign({}, state, {newColors: newColor});
             
 
         case RESET_GAME:
