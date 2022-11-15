@@ -61,8 +61,9 @@ export const setTargetColor = () => {
     }
 }
 
-export const hideBox = () => {
+export const hideBox = (color) => {
    return {
        type: HIDE_BOX,
+       payload: color
    }
 }

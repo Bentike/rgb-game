@@ -78,7 +78,7 @@ function App({getColor,
   useEffect(() => {
      setColor();
      setTarget();
-  }, [setTarget, setColor, newColors]);
+  }, [setTarget, setColor]);
  
   return (
     <div className="App">
