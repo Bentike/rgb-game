@@ -1,7 +1,6 @@
 import { GET_BOX_COLOR, 
          SET_GAME_LEVEL_EASY, 
          SET_GAME_LEVEL_HARD,
-         RESET_GAME,
          SET_COLORS, 
          SET_MESSAGE,
          CLEAR_MESSAGE,
@@ -93,10 +92,6 @@ export const boxColorReducer = (state = initialState, action) => {
                 state.headerBg = clickedBoxBg;
             }
             return Object.assign({}, state, {newColors: newColor});
-            
-
-        case RESET_GAME:
-            return Object.assign({}, {});
                 
         default:
             return state;    

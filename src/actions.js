@@ -1,7 +1,6 @@
 import { GET_BOX_COLOR, 
          SET_GAME_LEVEL_EASY, 
          SET_GAME_LEVEL_HARD,
-         RESET_GAME,
          SET_COLORS,
          SET_MESSAGE,
          SET_TARGET_COLOR,
@@ -28,12 +27,6 @@ export const setGameLevelHard = (level) => {
     return {
         type: SET_GAME_LEVEL_HARD,
         payload: level
-    }
-}
-
-export const resetGame = () => {
-    return {
-        type: RESET_GAME
     }
 }
 
