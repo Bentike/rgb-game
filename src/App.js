@@ -22,7 +22,6 @@ const mapStateToProps = (state) => {
       newColors: state.newColors,
       message: state.message,
       targetColor: state.targetColor,
-      boxVisibility: state.hideBox
    }
 }
 
@@ -74,9 +73,8 @@ function App({getColor,
               message, 
               setTarget, 
               targetColor, 
-              boxVisibility, 
               newColors}){
-                
+
   useEffect(() => {
      setColor();
      setTarget();
@@ -93,7 +91,7 @@ function App({getColor,
       />
       <div className='box__wrap'>
           {newColors.map((color) => {
-             return <Box key={color} visibility={boxVisibility} color={color} handleClick={getColor}/>
+             return <Box key={color} color={color} handleClick={getColor}/>
           })}
       </div> 
     </div>
