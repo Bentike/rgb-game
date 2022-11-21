@@ -25,5 +25,3 @@ export const sendMessageToUser = ((a, b) => {
       if(a === b) return "Correct";
       return "Incorrect";
   });
-  
-  
