@@ -18,7 +18,6 @@ import './App.css';
 const mapStateToProps = (state) => {
    return {
       pickedColor: state.pickedColor,
-      colors: state.colors,
       newColors: state.newColors,
       message: state.message,
       targetColor: state.targetColor,
@@ -73,7 +72,6 @@ function App({getColor,
               message, 
               setTarget, 
               targetColor, 
-              colors,
               newColors}){
 
   useEffect(() => {
