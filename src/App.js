@@ -18,7 +18,7 @@ import './App.css';
 const mapStateToProps = (state) => {
    return {
       pickedColor: state.pickedColor,
-      newColors: state.newColors,
+      colors: state.colors,
       message: state.message,
       targetColor: state.targetColor,
       headerBackground: state.headerBg
@@ -72,7 +72,7 @@ function App({getColor,
               message, 
               setTarget, 
               targetColor, 
-              newColors}){
+              colors}){
 
   useEffect(() => {
      setColor();
@@ -89,7 +89,7 @@ function App({getColor,
         message={message}
       />
       <div className='box__wrap'>
-          {newColors.map((color, index) => {
+          {colors.map((color, index) => {
              return <Box key={index} color={color} handleClick={getColor}/>
           })}
       </div> 
