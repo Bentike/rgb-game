@@ -13,8 +13,7 @@ import { generateNumberOfColors, setATargetColor, sendMessageToUser } from "./Co
 
 const initialState = {
     pickedColor: '',
-   // colors: [],
-    newColors: [],
+    colors: [],
     targetColor: '',
     level: 'easy',
     message: '',
@@ -27,8 +26,7 @@ export const boxColorReducer = (state = initialState, action) => {
         case SET_COLORS:
             let color = generateNumberOfColors(action.payload);
             return Object.assign({}, state, {
-                //colors: [...color],
-                newColors: [...color]
+                colors: [...color]
             });
 
         case GET_BOX_COLOR: 
@@ -49,13 +47,13 @@ export const boxColorReducer = (state = initialState, action) => {
             return Object.assign({}, state, {message: ""});    
             
         case SET_TARGET_COLOR:
-            return Object.assign({}, state, {targetColor: setATargetColor(state.newColors)});
+            return Object.assign({}, state, {targetColor: setATargetColor(state.colors)});
             
         case SET_HEADER_BG :
             return Object.assign({}, state, {headerBg: action.payload});    
         
         case HIDE_BOX:
-            let newColor = state.newColors;
+            let newColor = state.colors;
             let clickedBoxBg = action.payload.target.style.backgroundColor;
             let index = newColor.indexOf(clickedBoxBg);
             if(state.message === "Incorrect") newColor[index] = "rgb(35, 35, 35)";
@@ -65,7 +63,7 @@ export const boxColorReducer = (state = initialState, action) => {
                 }
                 state.headerBg = clickedBoxBg;
             }
-            return Object.assign({}, state, {newColors: newColor});
+            return Object.assign({}, state, {colors: newColor});
                 
         default:
             return state;    
