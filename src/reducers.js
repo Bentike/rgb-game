@@ -13,7 +13,7 @@ import { generateNumberOfColors, setATargetColor, sendMessageToUser } from "./Co
 
 const initialState = {
     pickedColor: '',
-    colors: [],
+   // colors: [],
     newColors: [],
     targetColor: '',
     level: 'easy',
@@ -27,7 +27,7 @@ export const boxColorReducer = (state = initialState, action) => {
         case SET_COLORS:
             let color = generateNumberOfColors(action.payload);
             return Object.assign({}, state, {
-                colors: [...color],
+                //colors: [...color],
                 newColors: [...color]
             });
 
