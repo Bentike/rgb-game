@@ -25,11 +25,10 @@ export const boxColorReducer = (state = initialState, action) => {
     switch(action.type){
 
         case SET_COLORS:
-            console.log(state.colors);
-            console.log(state.newColors);
+            let color = generateNumberOfColors(action.payload);
             return Object.assign({}, state, {
-                colors: generateNumberOfColors(action.payload),
-                newColors: [...state.colors]
+                colors: [...color],
+                newColors: [...color]
             });
 
         case GET_BOX_COLOR: 
